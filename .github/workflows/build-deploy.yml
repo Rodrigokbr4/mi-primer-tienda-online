@@ -5,7 +5,7 @@ on:
     branches:
       - "master"
 
-job:
+jobs:
   build:
     runs-on: ubuntu-lates
 
@@ -13,7 +13,7 @@ job:
       - name: Checkout
         uses: actions/checkout@v4
 
-      -name: install & build
+      - name: install & build
         run: npm i && npm run build
       
       - name: Deploy
