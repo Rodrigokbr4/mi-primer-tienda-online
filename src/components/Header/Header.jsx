@@ -4,6 +4,7 @@ import { HeadButtons } from "./HeadButtons";
 import { IconMenu, CloseIcon } from "../../Icons/iconMenu.jsx"
 import { HeadBar} from "./HeadBar.jsx"
 import { SearchAndCartButtons } from "./SearchAndCartButtons";
+import { AnnouncementBar } from "./AnnouncementBar";
 
 export function Header () {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,6 +36,8 @@ export function Header () {
     
 
     return (
+        <>
+        <AnnouncementBar/>
         <header className="bg-white shadow-md">
             {isButtonDisabled && (<HeadBar />)}
             
@@ -56,5 +59,6 @@ export function Header () {
             </nav>
             <div className="flex flex-col mx-6 my-3 md:flex-row md:justify-center">{isMenuOpen && !isButtonDisabled && (<HeadButtons />)}</div>
         </header>
+        </>
     )        
 }

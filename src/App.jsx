@@ -1,14 +1,16 @@
-import { Footer } from './components/FooterComponents/Footer.jsx'
-import { Header } from './components/HeaderComponents/Header.jsx'
-import { HomeView } from './components/Home/HomeView.jsx'
+import { Footer } from './components/Footer/Footer.jsx'
+import { Header } from './components/Header/Header.jsx'
+import { Outlet } from 'react-router-dom'
+
 
 function App() {
 
   return (
-    <>       
+    <>
       <Header />
-      <HomeView />
+      <Outlet />
       <Footer />
+      
     </>    
   )
 }
